@@ -13,19 +13,7 @@ route.post('/', postProfesionales)
 route.put('/', putProfesionales)
 
 route.delete('/', deleteProfesionales)
-// //Consultar un dato
-// route.get('/consultarUsuario', (req, res) => {
-//     res.json({
-//         msg: 'Lista Datos'
-//     })
-// })
 
-// //Metodo para agregar datos
-// route.post('/', (req, res) => {
-//     res.json({
-//         msg: 'Insercion exitosa'
-//     })
-// })
 
 
 module.exports = route 

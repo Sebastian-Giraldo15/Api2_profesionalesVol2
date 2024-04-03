@@ -53,6 +53,10 @@ const profecionalesVol_Schema = ({
         type: String,
         required:[true,'El genero es requerido'],
         enum:['Masculino', 'Femenino']
+    },
+    otroCampo:{
+        type: String,
+        required:[true,'El genero es requerido'],
     }
 })
 

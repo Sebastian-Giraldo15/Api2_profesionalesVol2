@@ -27,7 +27,7 @@ const postProfesionales = async(req, res) => {
 }
 
 const putProfesionales = async(req, res) =>{
-    const {tipo_documento, numero_documento, nombre_profesional, apellido_profesional, fecha_nacimiento, edad, pais_nacimiento, dep_nacimiento, mun_nacimiento, genero} = req.body
+    const {tipo_documento, numero_documento, nombre_profesional, apellido_profesional, fecha_nacimiento, edad, pais_nacimiento, dep_nacimiento, mun_nacimiento, genero, otroCampo} = req.body
     try {
         const profesional = await Profesional.findOneAndUpdate({nombre_profesional: nombre_profesional},
             {tipo_documento:tipo_documento, numero_documento:numero_documento, nombre_profesional:nombre_profesional, apellido_profesional:apellido_profesional,
@@ -36,7 +36,8 @@ const putProfesionales = async(req, res) =>{
             pais_nacimiento:pais_nacimiento,
             dep_nacimiento:dep_nacimiento,
             mun_nacimiento:mun_nacimiento,
-            genero:genero
+            genero:genero,
+            otroCampo:otroCampo,
         })
             mensaje = 'Actualizacion exitosa'
     } catch(error) {
